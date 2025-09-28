@@ -1,0 +1,4 @@
+[submodule "drivers/ch32v00x-hal"]
+	path = drivers/ch32v00x-hal
+	url = git@github.com:truongtl/ch32v00x-hal-driver.git
+	branch = main
