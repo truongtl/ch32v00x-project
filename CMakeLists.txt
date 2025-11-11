@@ -24,10 +24,8 @@ set(PRJ_DIR ${CMAKE_SOURCE_DIR}/projects/${PROJECT})
 if(NOT EXISTS "${PRJ_DIR}/main.c")
   message(FATAL_ERROR "Not found projects/${PROJECT}/main.c")
 endif()
-set(SRC_PROJECT
-  ${PRJ_DIR}/main.c
-  ${PRJ_DIR}/ch32v00x_it.c
-  ${PRJ_DIR}/system_ch32v00x.c
+file(GLOB SRC_PROJECT CONFIGURE_DEPENDS
+    "${PRJ_DIR}/*.c"
 )
 
 set(SRC_STARTUP ${CMAKE_SOURCE_DIR}/drivers/device/startup/startup_ch32v00x.S)
